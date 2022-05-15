@@ -1,0 +1,123 @@
+$dialog-height: 70vh;
+$dialog-width: 85vw;
+
+.dialog {
+  background-color: $text-color;
+  color: $background-color;
+
+  min-height: $dialog-height;
+  width: $dialog-width;
+
+  border-radius: 5px;
+  box-shadow: $main-box-shadow;
+  margin: 0;
+  padding: 2vh 5vh;
+
+  &__close-button {
+    position: absolute;
+    right: 30px;
+    
+    button {
+      border: none;
+      text-decoration: none;
+      font-size: 30px;
+      transition: all 0.5s ease-in-out;
+    }
+
+    button:hover {
+      color: $accent-color;
+      transform: rotate(90deg);
+    }
+  }
+
+  &__content {
+
+    @media (min-width: 768px) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+
+    &__img,
+    &__text {
+      margin: 4vh 10px 0;
+    }
+
+    &__img {
+      background-color: black;
+      height: 20vh;
+
+      @media (min-width: 768px) {
+        height: 58vh;
+      }
+    }
+    &__text {
+      .dialog-author {
+        font-weight: 900;
+        font-size: 1.2rem;
+        margin-top: 0.25rem;
+        position: relative;
+
+        &::after {
+          content: '';
+          position: absolute;
+          display: block;
+          bottom: -8px;
+          height: 2px;
+          width: 120px;
+          background-color: $background-color;
+
+          @media (min-width: 768px) {
+            width: 200px;
+          }
+        }
+      }
+      .dialog-source {
+        font-weight: 400;
+      }
+
+      .dialog-title {
+        font-weight: 900;
+        font-size: 1.7rem;
+        margin-top: 0.7rem;
+
+        @media (min-width: 768px) {
+          max-width: 35vw;
+        }
+      }
+
+      .dialog-description {
+        font-size: 1rem;
+        margin-top: 1rem;
+
+        @media (min-width: 768px) {
+          font-size: 1.2rem;
+          max-width: 35vw;
+        }
+      }
+
+      .dialog-button {
+        cursor: pointer;
+        border-radius: 4px;
+        border: none;
+        text-align: center;
+        font-size: 1.25rem;
+        font-weight: 700;
+        letter-spacing: 1px;
+        margin-top: 1.25rem;
+        padding: 12px 16px;
+        background-color: $accent-color;
+        transition: filter .5s ease-in-out;
+
+        & a {
+          text-decoration: none;
+          color: $text-color;
+        }
+
+        &:hover {
+          filter: brightness(1.5);;
+        }
+      }
+    }
+  }
+}

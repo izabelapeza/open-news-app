@@ -1,0 +1,42 @@
+.search {
+  &__input,
+  &__button {
+    border-radius: 4px;
+    text-align: center;
+    font-size: 16px;
+    border: none;
+  }
+
+  &__input {
+    padding: 12px 20px;
+    background-color: rgba($text-color, 0.55);
+    transition: box-shadow .5s ease-in-out;
+  
+    color: $background-color;
+  
+    &:focus {
+      outline: none;
+      background-color: rgba($text-color, 0.75);
+      box-shadow: $main-box-shadow;
+    }
+
+    &:hover {
+      box-shadow: $main-box-shadow;
+    }
+  }
+
+  &__button {
+    cursor: pointer;
+    margin-left: 10px;
+    padding: 12px 16px;
+    background-color: $accent-color;
+    color: $text-color;
+    font-weight: 700;
+    letter-spacing: 1px;
+    transition: filter .5s ease-in-out;
+
+    &:hover {
+      filter: brightness(1.25);;
+    }
+  }
+}

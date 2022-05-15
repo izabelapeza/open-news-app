@@ -1,0 +1,31 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;500;700;900&display=swap");
+
+@import './variables';
+@import './logo';
+@import './search';
+@import './loading';
+@import './footer';
+@import './error';
+@import './dialog';
+
+// custom scrollbar
+html {
+  scrollbar-width: normal;
+  scrollbar-color: $gray-lighter $gray-darker;
+}
+
+html::-webkit-scrollbar {
+  width: 20px;
+}
+
+html::-webkit-scrollbar-thumb {
+  background-color: rgba($gray-lighter, 0.25);
+
+  &:hover {
+    background-color: $gray-lighter;
+  }
+}
+
+html::-webkit-scrollbar-track {
+  background-color: $gray-darker;
+}

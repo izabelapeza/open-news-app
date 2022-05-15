@@ -1,0 +1,17 @@
+.logo {
+  font-weight: 900;
+  white-space: nowrap;
+  text-transform: uppercase;
+
+  &__first-part {
+    border-bottom: 0.1em solid;
+  }
+
+  &__second-part {
+    color: $accent-color;
+  }
+
+  &__third-part {
+    border-top: 0.1em solid;
+  }
+}

@@ -1,0 +1,28 @@
+@keyframes error-bg-color {
+  0% {filter: brightness(0.8);}
+  50% {filter: brightness(1.5);}
+  100% {filter: brightness(0.8);}
+}
+
+.error-element {
+  margin: 50px 5vh;
+  padding: 20px 25px;
+  border-radius: 10px;
+  background-color: $error-color;
+
+  animation-name: error-bg-color;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+
+  &__text {
+    font-size: 18px;
+
+    @media (min-width: 768px) {
+      font-size: 20px;
+    }
+
+    .error-icon {
+      margin-right: 10px;
+    }
+  }
+}
